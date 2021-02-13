@@ -1,0 +1,448 @@
+<!-- {{diagnostic}} -->
+<form #editableActivityForm="ngForm" (ngSubmit)="onSubmit()">
+	<table class="chp100d-display table">
+
+		<tr>
+			<th style="width:70px; text-align: center;">
+				<a href="#"><span class="fa fa-edit"></span></a>
+			</th>
+			<!-- </tr>
+
+		<tr>
+			<td><input type="text"  id="9"></td>
+		</tr> -->
+			<tr>
+				<td style="padding: 3px 3px 3px 3px;">
+					<button type="submit" class="btn btn-success" style="padding:0px;" [disabled]="!editableActivityForm.form.valid">OK</button>					{{model.id}}
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+					<select autofocus="autofocus" data-val="true" data-val-required="The Program code * | 1 field is required." id="type_Program"
+					 (change)="onKey($event)" [(ngModel)]="model.type_Program" name="type_Program" required>
+          <option *ngFor="let pt of programTypes" [value]="pt.value">{{pt.text}}</option>
+        </select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<select id="type_Inspection" (change)="onKey($event)" [(ngModel)]="model.type_Inspection" name="type_Inspection" required>
+          <option *ngFor="let it of inspectionTypes" [value]="it.value">{{it.text}}</option>
+        </select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" id="type_BitProgram" (change)="onKey($event)" [(ngModel)]="model.type_BitProgram" name="type_BitProgram">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" id="dutyHours_Inspection_Carrier" (change)="onKey($event)" [(ngModel)]="model.dutyHours_Inspection_Carrier"
+					 type="number" min="0" max="999" step="0.1" name="dutyHours_Inspection_Carrier">
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+					<input type="text" id="dutyHours_Inspection_MaintenanceProgram" (change)="onKey($event)" [(ngModel)]="model.dutyHours_Inspection_MaintenanceProgram"
+					 type="number" min="0" max="999" step="0.1" name="dutyHours_Inspection_MaintenanceProgram">
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+
+					<input type="text" id="dutyHours_Inspection_DriverRecords" (change)="onKey($event)" [(ngModel)]="model.dutyHours_Inspection_DriverRecords"
+					 type="number" min="0" max="999" step="0.1" name="dutyHours_Inspection_DriverRecords">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+
+					<input type="text" id="dutyHours_Inspection_VehicleInspection" (change)="onKey($event)" [(ngModel)]="model.dutyHours_Inspection_VehicleInspection"
+					 type="number" min="0" max="999" step="0.1" name="dutyHours_Inspection_VehicleInspection">
+
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+
+
+					<input type="text" id="dutyHours_Inspection_ContainerTankInspection" (change)="onKey($event)" [(ngModel)]="model.dutyHours_Inspection_ContainerTankInspection"
+					 type="number" min="0" max="999" step="0.1" name="dutyHours_Inspection_ContainerTankInspection">
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+
+					<input type="text" id="dutyHours_Inspection_HazardousMaterialInspection" (change)="onKey($event)" [(ngModel)]="model.dutyHours_Inspection_HazardousMaterialInspection"
+					 type="number" min="0" max="999" step="0.1" name="dutyHours_Inspection_HazardousMaterialInspection">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<input type="text" id="dutyHours_Inspection_Scheduling" (change)="onKey($event)" [(ngModel)]="model.dutyHours_Inspection_Scheduling"
+					 type="number" min="0" max="999" step="0.1" name="dutyHours_Inspection_Scheduling">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<input type="text" id="dutyHours_Inspection_Travel" (change)="onKey($event)" [(ngModel)]="model.dutyHours_Inspection_Travel"
+					 type="number" min="0" max="999" step="0.1" name="dutyHours_Inspection_Travel">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<input type="text" id="dutyHours_OtherActivities_PreInspection" (change)="onKey($event)" [(ngModel)]="model.dutyHours_OtherActivities_PreInspection"
+					 type="number" min="0" max="999" step="0.1" name="dutyHours_OtherActivities_PreInspection">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<input type="text" id="dutyHours_OtherActivities_PostInspection" (change)="onKey($event)" [(ngModel)]="model.dutyHours_OtherActivities_PostInspection"
+					 type="number" min="0" max="999" step="0.1" name="dutyHours_OtherActivities_PostInspection">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<input type="text" id="dutyHours_OtherActivities_CIIAIIMAIT" (change)="onKey($event)" [(ngModel)]="model.dutyHours_OtherActivities_CIIAIIMAIT"
+					 type="number" min="0" max="999" step="0.1" name="dutyHours_OtherActivities_CIIAIIMAIT">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<input type="text" id="dutyHours_OtherActivities_AdminAction" (change)="onKey($event)" [(ngModel)]="model.dutyHours_OtherActivities_AdminAction"
+					 type="number" min="0" max="999" step="0.1" name="dutyHours_OtherActivities_AdminAction">
+
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+					<input type="text" id="dutyHours_OtherActivities_Training" (change)="onKey($event)" [(ngModel)]="model.dutyHours_OtherActivities_Training"
+					 type="number" min="0" max="999" step="0.1" name="dutyHours_OtherActivities_Training">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<input type="text" id="dutyHours_OtherActivities_CHPVehicleMaintenance" (change)="onKey($event)" [(ngModel)]="model.dutyHours_OtherActivities_CHPVehicleMaintenance"
+					 type="number" min="0" max="999" step="0.1" name="dutyHours_OtherActivities_CHPVehicleMaintenance">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<input type="text" id="dutyHours_OtherActivities_Other" (change)="onKey($event)" [(ngModel)]="model.dutyHours_OtherActivities_Other"
+					 type="number" min="0" max="999" step="0.1" name="dutyHours_OtherActivities_Other">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<input type="text" id="dutyHours_OtherActivities_OtherComments" (change)="onKey($event)" [(ngModel)]="model.dutyHours_OtherActivities_OtherComments"
+					 name="dutyHours_OtherActivities_OtherComments">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+					{{model.dutyHours_Totals}}
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<select id="rate_TerminalRating" (change)="onKey($event)" [(ngModel)]="model.rate_TerminalRating" name="rate_TerminalRating">
+          <option *ngFor="let rt of ratingTypes" [value]="rt.value">{{rt.text}}</option>
+        </select>
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<select id="rate_CarrierRating" (change)="onKey($event)" [(ngModel)]="model.rate_CarrierRating" name="rate_CarrierRating">
+          <option *ngFor="let rt of ratingTypes" [value]="rt.value">{{rt.text}}</option>
+        </select>
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<select id="rate_UpDownGrade" (change)="onKey($event)" [(ngModel)]="model.rate_UpDownGrade" name="rate_UpDownGrade">
+          <option *ngFor="let up of upDownTypes" [value]="up.value">{{up.text}}</option>
+        </select>
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<input type="text" id="rate_CHP345Issued" (change)="onKey($event)" [(ngModel)]="model.rate_CHP345Issued" type="number" min="0"
+					 max="999" name="rate_CHP345Issued">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<input type="text" id="inspectionItems_MaintenanceRecords" (change)="onKey($event)" [(ngModel)]="model.inspectionItems_MaintenanceRecords"
+					 type="number" min="0" max="999" name="inspectionItems_MaintenanceRecords">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<input type="text" id="inspectionItems_DriverRecords" (change)="onKey($event)" [(ngModel)]="model.inspectionItems_DriverRecords"
+					 type="number" min="0" max="999" name="inspectionItems_DriverRecords">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<input type="text" id="inspectionItems_Vehicles" (change)="onKey($event)" [(ngModel)]="model.inspectionItems_Vehicles" type="number"
+					 min="0" max="999" name="inspectionItems_Vehicles">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<input type="text" id="inspectionItems_VehicleReinsp" (change)="onKey($event)" [(ngModel)]="model.inspectionItems_VehicleReinsp"
+					 type="number" min="0" max="999" name="inspectionItems_VehicleReinsp">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<input type="text" id="inspectionItems_FLCargoTank" (change)="onKey($event)" [(ngModel)]="model.inspectionItems_FLCargoTank"
+					 type="number" min="0" max="999" name="inspectionItems_FLCargoTank">
+
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+					<input type="text" id="inspectionItems_HWContainer" (change)="onKey($event)" [(ngModel)]="model.inspectionItems_HWContainer"
+					 type="number" min="0" max="999" name="inspectionItems_HWContainer">
+
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+					<input type="text" id="inspectionItems_UnitsCertified" (change)="onKey($event)" [(ngModel)]="model.inspectionItems_UnitsCertified"
+					 type="number" min="0" max="999" name="inspectionItems_UnitsCertified">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<input type="text" id="inspectionItems_CVSA" (change)="onKey($event)" [(ngModel)]="model.inspectionItems_CVSA" type="number"
+					 min="0" max="999" name="inspectionItems_CVSA">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<input type="text" id="inspectionItems_VehicleOOS" (change)="onKey($event)" [(ngModel)]="model.inspectionItems_VehicleOOS"
+					 type="number" min="0" max="999" name="inspectionItems_VehicleOOS">
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+
+					<input type="text" id="Violations_Admin_MaintenanceProgramRecords" (change)="onKey($event)" [(ngModel)]="model.Violations_Admin_MaintenanceProgramRecords"
+					 type="number" min="0" max="999" name="Violations_Admin_MaintenanceProgramRecords">
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+
+					<input type="text" id="Violations_Admin_DriverRecords" (change)="onKey($event)" [(ngModel)]="model.Violations_Admin_DriverRecords"
+					 type="number" min="0" max="999" name="Violations_Admin_DriverRecords">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<input type="text" id="Violations_Admin_HoursOfService" (change)="onKey($event)" [(ngModel)]="model.Violations_Admin_HoursOfService"
+					 type="number" min="0" max="999" name="Violations_Admin_HoursOfService">
+
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+					<input type="text" id="Violations_Admin_HazMaterials" (change)="onKey($event)" [(ngModel)]="model.Violations_Admin_HazMaterials"
+					 type="number" min="0" max="999" name="Violations_Admin_HazMaterials">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<input type="text" id="Violations_Admin_CSAT" (change)="onKey($event)" [(ngModel)]="model.Violations_Admin_CSAT" type="number"
+					 min="0" max="999" name="Violations_Admin_CSAT">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<input type="text" id="Violations_Vehicle_Brakes" (change)="onKey($event)" [(ngModel)]="model.Violations_Vehicle_Brakes"
+					 type="number" min="0" max="999" name="Violations_Vehicle_Brakes">
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+
+					<input type="text" id="Violations_Vehicle_LampsSignals" (change)="onKey($event)" [(ngModel)]="model.Violations_Vehicle_LampsSignals"
+					 type="number" min="0" max="999" name="Violations_Vehicle_LampsSignals">
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+
+					<input type="text" id="Violations_Vehicle_ConnectingDevices" (change)="onKey($event)" [(ngModel)]="model.Violations_Vehicle_ConnectingDevices"
+					 type="number" min="0" max="999" name="Violations_Vehicle_ConnectingDevices">
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+
+					<input type="text" id="Violations_Vehicle_SteeringAndSuspension" (change)="onKey($event)" [(ngModel)]="model.Violations_Vehicle_SteeringAndSuspension"
+					 type="number" min="0" max="999" name="Violations_Vehicle_SteeringAndSuspension">
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+
+					<input type="text" id="Violations_Vehicle_TiresAndWheels" (change)="onKey($event)" [(ngModel)]="model.Violations_Vehicle_TiresAndWheels"
+					 type="number" min="0" max="999" name="Violations_Vehicle_TiresAndWheels">
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+
+					<input type="text" id="Violations_Vehicle_EquipmentMaintenance" (change)="onKey($event)" [(ngModel)]="model.Violations_Vehicle_EquipmentMaintenance"
+					 type="number" min="0" max="999" name="Violations_Vehicle_EquipmentMaintenance">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<input type="text" id="Violations_Vehicle_ContainerTank" (change)="onKey($event)" [(ngModel)]="model.Violations_Vehicle_ContainerTank"
+					 type="number" min="0" max="999" name="Violations_Vehicle_ContainerTank">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<input type="text" id="Spec_MCSTO" (change)="onKey($event)" [(ngModel)]="model.Spec_MCSTO" type="number" min="0" max="999"
+					 name="Spec_MCSTO">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<input type="text" id="Spec_NumberOfHighwayInspections" (change)="onKey($event)" [(ngModel)]="model.Spec_NumberOfHighwayInspections"
+					 type="number" min="0" max="999" name="Spec_NumberOfHighwayInspections">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+
+					<input type="text" id="Spec_EmptyField" (change)="onKey($event)" [(ngModel)]="model.Spec_EmptyField" type="string" name="Spec_EmptyField">
+
+				</td>
+			</tr>
+
+	</table>
+</form>

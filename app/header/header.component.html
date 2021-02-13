@@ -1,0 +1,32 @@
+<div class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+			<a href="/Activities" class="navbar-brand" style="color: #ffff;">CHP100D Automated</a>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li>
+					<a style="color: #fff;" href="#">CIRES</a>
+				</li>
+			</ul>
+
+			<form action="/Account/LogOff" class="navbar-right" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="" />
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a style="color: #ffff;" href="/" title="Manage">{{name}}, {{aNumber}}</a>
+					</li>
+					<!--<li><a href="#">Log off</a></li>-->
+				</ul>
+			</form>
+		</div>
+	</div>
+</div>
+
+<br />
+<br />
+<br />
